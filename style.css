@@ -1,0 +1,293 @@
+@font-face {
+	font-family: 'SFNSText Bold';
+	src: url('./Assets/fonts/San Francisco/otf/SFNSText-Bold.otf');
+}
+@font-face {
+	font-family: 'SFNSText Regular';
+	src: url('./Assets/fonts/San Francisco/otf/SFNSText-Light.otf');
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+:root {
+	--num-of-grids: 4;
+}
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+	font-family: 'SFNSText Bold';
+}
+p {
+	font-family: 'SFNSText Regular';
+	line-height: 1.4rem;
+}
+li {
+	list-style-type: none;
+}
+.container {
+	width: 85%;
+	margin: auto;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+.hero::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	opacity: 0.8;
+	z-index: 0;
+}
+.hero {
+	position: relative;
+}
+.hero > * {
+	position: relative;
+	z-index: 100;
+}
+.hero {
+	background: url('./Assets/church.jpeg') center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 1.5rem;
+}
+
+.main-nav::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+	opacity: 0;
+	transform: scale(0);
+	transition: opacity 0.5s;
+}
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0%;
+	left: 100%;
+	width: 80%;
+	height: 100%;
+	z-index: 999;
+	opacity: 1;
+	padding: 3rem;
+	margin: auto;
+	background-color: white;
+	border-radius: 1rem 0 0 1rem;
+	transition: all 650ms ease-in-out;
+}
+.open .nav-list {
+	left: 20%;
+}
+.open .main-nav::before {
+	opacity: 1;
+	transform: scale(1);
+}
+.nav-item {
+	margin-top: 3rem;
+}
+.close-container {
+	margin-left: auto;
+	font-size: 1.5rem;
+}
+.logo {
+	height: 4rem;
+}
+.mobile-toggle i {
+	font-size: 2rem;
+	color: white;
+}
+.hero-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	margin-top: 3rem;
+}
+.hero-grid-item {
+	grid-column: span var(--num-of-grids);
+}
+.hero-grid-item h1 {
+	font-size: 2.5rem;
+	padding-bottom: 1rem;
+	position: relative;
+	color: white;
+}
+.hero-grid-item p {
+	color: white;
+}
+
+.contact-button {
+	background-color: transparent;
+	border: 1px solid white;
+	padding: 1rem;
+	color: white;
+	margin-top: 2rem;
+	border-radius: 3px;
+}
+
+/*about*/
+.about {
+	margin-top: 3rem;
+}
+
+.about-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	grid-gap: 2rem;
+}
+.about h2 {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+.about-grid-item {
+	grid-column: span var(--num-of-grids);
+}
+.content {
+	position: relative;
+	overflow: hidden;
+}
+.read-more {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+
+	/* "transparent" only works here because == rgba(0,0,0,0) */
+	background-image: linear-gradient(to bottom, transparent, white);
+}
+.read-more a button {
+	padding: 0.5rem;
+	background-color: white;
+	border: 1px solid #333;
+	border-radius: 0.4rem;
+}
+
+/*pastor*/
+
+.pastor {
+	margin-top: 3rem;
+}
+.pastor h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.pastor-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	grid-gap: 2rem;
+}
+.pastor-grid-item {
+	grid-column: span var(--num-of-grids);
+}
+.pastor-grid-item h3 {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+/*image grid*/
+.gallery {
+	margin-top: 3rem;
+}
+.gallery h2 {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	grid-gap: 2rem;
+}
+.image-grid img {
+	grid-column: span 2;
+}
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+.gallery-text,
+.gallery-slide {
+	grid-column: span 6;
+}
+/*footer*/
+
+.footer-section {
+	background: url('./Assets/church.jpeg') center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+}
+.footer-section::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	opacity: 0.8;
+	z-index: 0;
+}
+.footer-section > * {
+	position: relative;
+	z-index: 90;
+	color: white;
+	margin-top: 3rem;
+}
+.footer-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	grid-gap: 3rem;
+	padding-top: 3rem;
+}
+.footer-grid-item {
+	grid-column: span var(--num-of-grids);
+}
+.footer-grid-item a {
+	color: white;
+}
+.footer-grid-item h3 {
+	margin-bottom: 0.8rem;
+}
+.footer-grid-item span i {
+	font-size: 1.5rem;
+	margin-right: 0.5rem;
+}
+.follow {
+	margin: 0.5rem 0;
+}
+.footer-grid-item img {
+	margin-bottom: 2rem;
+}
+.booking {
+	margin-bottom: 3rem;
+}
