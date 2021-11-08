@@ -71,12 +71,12 @@ sr.reveal('.headline', {
 sr.reveal('.animate-right', {
 	origin: 'right',
 	duration: 1000,
-	distance: '20rem',
+	distance: '10rem',
 	delay: 0,
 });
 sr.reveal('.animate-left', {
 	origin: 'left',
-	duration: 1000,
-	distance: '20rem',
+	duration:1000,
+	distance: '10rem',
 	delay: 0,
 });
