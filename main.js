@@ -2,6 +2,28 @@ const open = document.querySelector('#open');
 const close = document.querySelector('#close');
 const body = document.querySelector('body');
 
+const modal = document.querySelector('.modal');
+const previews = document.querySelectorAll('.gallery img');
+const original = document.querySelector('.full-img');
+
+console.log(previews);
+console.log(modal);
+previews.forEach((preview) => {
+	preview.addEventListener('click', () => {
+		modal.classList.add('open');
+		const originalSrc = preview.getAttribute('data-original');
+		body.style.overflow = 'hidden';
+		original.src = `./Assets/${originalSrc}`;
+	});
+});
+
+modal.addEventListener('click', (e) => {
+	if (e.target.classList.contains('modal')) {
+		modal.classList.remove('open');
+		body.style.overflow = 'scroll';
+	}
+});
+
 open.addEventListener('click', () => {
 	body.classList.add('open');
 });
@@ -43,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*Scroll animation*/
 
 window.sr = ScrollReveal();
-sr.reveal('.headline',{
+sr.reveal('.headline', {
 	duration: 2000,
 });
 sr.reveal('.animate-right', {
@@ -58,4 +80,3 @@ sr.reveal('.animate-left', {
 	distance: '20rem',
 	delay: 0,
 });
-

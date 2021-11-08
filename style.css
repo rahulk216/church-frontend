@@ -232,7 +232,7 @@ img {
 }
 .hero > * {
 	position: relative;
-	z-index: 100;
+	z-index: 10;
 }
 .hero-container {
 	width: 80%;
@@ -367,7 +367,8 @@ img {
 .read-more a button {
 	padding: 0.5rem;
 	background-color: white;
-	border: 1px solid #333;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 	border-radius: 0.4rem;
 }
 
@@ -445,7 +446,7 @@ img {
 }
 .footer-section > * {
 	position: relative;
-	z-index: 90;
+	z-index: 10;
 	color: white;
 	margin-top: 3rem;
 }
@@ -518,7 +519,38 @@ li a {
 	padding-top: 0.5rem;
 }
 /*hover modal*/
-
+.modal {
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.25s ease-out;
+}
+.modal.open {
+	opacity: 1;
+	pointer-events: all;
+}
+.full-img {
+	position: absolute;
+	height:auto;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	transform: translate(-50%, -50%) scale(0.5);
+	transition: all 0.25s ease-out;
+}
+.full-img.open {
+	transform: translate(-50%, -50%) scale(1);
+}
+.copyright{
+	font-size:0.8rem;
+	text-align:center;
+	padding-bottom: 1rem;
+}
 @media screen and (min-width: 768px) {
 	:root {
 		--num-of-grids: 8;
