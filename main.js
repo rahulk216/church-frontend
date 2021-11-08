@@ -1,14 +1,14 @@
-const open =document.querySelector('#open');
-const close =document.querySelector('#close');
+const open = document.querySelector('#open');
+const close = document.querySelector('#close');
 const body = document.querySelector('body');
 
-open.addEventListener('click', ()=>{
-    body.classList.add('open');
-})
+open.addEventListener('click', () => {
+	body.classList.add('open');
+});
 
-close.addEventListener('click', ()=>{
-    body.classList.remove('open');
-})
+close.addEventListener('click', () => {
+	body.classList.remove('open');
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 	if (document.getElementById('gallery-slider-left') != null) {
@@ -29,14 +29,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		primary.sync(sec).mount();
 	}
-	if (document.getElementById('gallery-slider') != null) {
-	}
-	if (document.getElementById('team-slider') != null) {
-		new Splide('#team-slider', {
+	if (document.getElementById('footer-slider') != null) {
+		var sec = new Splide('#footer-slider', {
 			width: '100%',
 			arrows: false,
 			autoplay: true,
 			infinite: true,
+			pagination: true,
 		}).mount();
 	}
 });
+
+/*Scroll animation*/
+
+window.sr = ScrollReveal();
+sr.reveal('.headline',{
+	duration: 2000,
+});
+sr.reveal('.animate-right', {
+	origin: 'right',
+	duration: 1000,
+	distance: '20rem',
+	delay: 0,
+});
+sr.reveal('.animate-left', {
+	origin: 'left',
+	duration: 1000,
+	distance: '20rem',
+	delay: 0,
+});
+

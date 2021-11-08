@@ -12,13 +12,14 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
 		/>
+		<script src="https://unpkg.com/scrollreveal"></script>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" href="./Assets/logo-church.png">
 		<title>Vishranthi Church</title>
 	</head>
 	<body >
-		<section class="hero">
-			<div class="container next-item">
+		<section id='header' class="hero">
+			<div class="hero-container next-item">
 				<header>
 					<nav class="main-nav">
 						<a href="/">
@@ -29,13 +30,13 @@
 								<i id="close" class="fas fa-times close"></i>
 							</div>
 							<li class="nav-item">
-								<a href="">About</a>
+								<a href="#about">About</a>
 							</li>
 							<li class="nav-item">
-								<a href="">Gallery</a>
+								<a href="#gallery">Gallery</a>
 							</li>
 							<li class="nav-item">
-								<a href="">Contact</a>
+								<a href="#contact">Contact</a>
 							</li>
 						</ul>
 						<div class="nav-items-right">
@@ -45,42 +46,42 @@
 						</div>
 					</nav>
 				</header>
-				<div class="hero-grid">
-					<div class="hero-grid-item">
-						<h1>Vishranthi Church Bockapatna</h1>
-						<p>
-							Lorem ipsum dolor - sit, amet consectetur adipisicing elit.
-							Recusandae rem perferendis sequi corporis dolor? Natus
-							perspiciatis fugit odio maiores at?
+				<div class=" hero-grid">
+					<div class=" relative hero-grid-item">
+						<h1 class='headline' >Vishranthi Church Bockapatna</h1>
+						<p class='headline'>
+							<strong>Proverbs 3:5-6:</strong> “Trust in the LORD with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths.”
 						</p>
-						<a href="/contact">
+						<a class='headline' href="#contact">
 							<button class="contact-button">Contact Us</button>
 						</a>
 					</div>
+					<a href="#contact">
+						<div class="hero-grid-item">
+							<div class="chevron-container">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							  </div>
+						</div>
+					</a>
+					
 				</div>
 			</div>
 		</section>
-		<section class="about">
+		<section id="about" class="about">
 			<div class="container">
 				<h2>About Our Church</h2>
 				<div class="about-grid">
-					<div class="about-grid-item">
+					<div class="about-grid-item ">
 						<img src="./Assets/churchOld.jfif" alt="" />
 					</div>
-					<div class="about-grid-item content">
+					<div class="about-grid-item content ">
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Sint, facere dignissimos minima quis modi saepe vel minus
-							assumenda architecto ipsa delectus incidunt. Fugiat, animi
-							illo. Repudiandae ipsum quos minima accusamus nobis eum
-							praesentium doloribus nulla inventore eius fugit, enim
-							dicta?Lorem ipsum dolor sit amet consectetur, adipisicing
-							elit. Aliquam cum, temporibus, alias rerum harum fugit quae
-							unde voluptate modi earum repudiandae. Perferendis, quidem
-							nostrum! Beatae laboriosam quae fuga commodi provident?
+							The history of Vishranthi Church can be traced back from the year 1806 to 1816, birth of an era of Peace Revolution in the place called Basel in the country of Switzerland. In the year 1815 Rev. Blumhardt of South Germany, Rev. M. Flone Basel of Wittenberg and another member of Chief Institution from Basel started an Organisation called "BASEL MISSION" Institution. On 26* of August 1816, three Missionaries were sent from Basel to different countries for the purpose of Ministerial work, the first Missionaries were sent to South Africa. In the year 1812, the British Government who were was ruling India gave permission to Basel Mission Institution to spread the Gospel in the West Coast of India from Cochin to Mumbai.
 						</p>
 						<p class="read-more">
-							<a href="#">
+							<a href="aboutchurch.html">
 								<button>Read More</button>
 							</a>
 						</p>
@@ -93,35 +94,51 @@
 				<h2>Our Pastor</h2>
 				<div class="pastor-grid">
 					<div class="pastor-grid-item">
-						<img src="./Assets/profile-pic.jpg" alt="" />
+						<img class='pastor-img' src="./Assets/profile-pic.jpg" alt="" />
 					</div>
 					<div class="pastor-grid-item">
 						<h3>Rev Santhosh</h3>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Temporibus ad animi omnis quod. Facere dolor, maxime
-							quisquam a nulla nobis magnam nostrum quibusdam quasi nihil
-							architecto recusandae voluptate dolores error.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, in nobis culpa reiciendis quaerat asperiores hic illo sunt dolorem unde neque velit commodi ut. Quis suscipit dolore quaerat ad vero in? Illum sapiente, possimus, molestiae vitae sit laboriosam culpa beatae illo, natus harum voluptatem quaerat rerum aperiam aut ullam repellat unde eius. Dolor debitis deleniti expedita eligendi temporibus in iste!
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="gallery">
+		<section id='gallery' class="gallery">
 			<h2>Gallery</h2>
 			<div class="image-grid container">
-				<img src="./Assets/churchOld.jfif" alt="" />
-				<img src="./Assets/churchOld.jfif" alt="" />
-				<img src="./Assets/churchOld.jfif" alt="" />
-				<img src="./Assets/churchOld.jfif" alt="" />
-				<img src="./Assets/churchOld.jfif" alt="" />
-				<img src="./Assets/churchOld.jfif" alt="" />
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
+				<div class="img-container">
+					<img src="./Assets/churchOld.jfif" alt="" />
+				</div>
 			</div>
+			
 		</section>
 		<section class="container gallery">
 			<h2>Events</h2>
 			<div class="gallery-grid">
-				<div class="gallery-text">
+				<div class="gallery-text ">
 					<div class="gallery-slider">
 						<div id="gallery-slider-left" class="splide">
 							<div class="splide__track">
@@ -209,7 +226,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="gallery-slide">
+				<div class="gallery-slide ">
 					<div class="gallery-slider">
 						<div id="gallery-slider" class="splide">
 							<div class="splide__track">
@@ -239,18 +256,46 @@
 				</div>
 			</div>
 		</section>
-		<footer class="footer-section">
+		<footer id='contact' class="footer-section">
+			
+			
 			<div class="footer-grid container">
 				<div class="footer-grid-item">
-					<h3>Location <i class="fas fa-map-marker-alt"></i></h3>
-					<p><strong>Vishranthi Church</strong></p>
-					<p>Bockapatna, Mangalore, Karnataka 575003</p>
-					<p class='follow'>Follow us on</p>
-					<span><i class="fab fa-facebook"></i></span>
-					<span><i class="fab fa-youtube"></i></span>
+					<div class="footer-left">
+						<h3>Location <i class="fas fa-map-marker-alt"></i></h3>
+						<p><strong>Vishranthi Church</strong></p>
+						<p>Bockapatna, Mangalore, Karnataka 575003</p>
+						<p class='follow'>Follow us on</p>
+						<a href="https://www.facebook.com/search/top?q=vishranthi%20church%20media"><span><i class="fab fa-facebook"></i></span></a>
+						<a href="https://www.youtube.com/channel/UCgFgIhFHWTRdaJFciUp4Omw"><span><i class="fab fa-youtube"></i></span></a>
+						
+					</div>
 				</div>
 				<div class="footer-grid-item">
-					<img src="./Assets/churchOld.jfif" alt="">
+					<div id="footer-slider" class="splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<img src="./Assets/churchOld.jfif" alt="" />
+								</li>
+								<li class="splide__slide">
+									<img src="./Assets/churchOld.jfif" alt="" />
+								</li>
+								<li class="splide__slide">
+									<img src="./Assets/churchOld.jfif" alt="" />
+								</li>
+								<li class="splide__slide">
+									<img src="./Assets/churchOld.jfif" alt="" />
+								</li>
+								<li class="splide__slide">
+									<img src="./Assets/churchOld.jfif" alt="" />
+								</li>
+								<li class="splide__slide">
+									<img src="./Assets/churchOld.jfif" alt="" />
+								</li>
+							</ul>
+						</div>
+					</div>
 					<div class="booking">
 						<h4>For Hall Bookings</h4>
 						<p><strong>Contact us :</strong><a href="tel:+917829780587">+91 7829780587</a></a></p>

@@ -6,6 +6,181 @@
 	font-family: 'SFNSText Regular';
 	src: url('./Assets/fonts/San Francisco/otf/SFNSText-Light.otf');
 }
+.chevron-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: absolute;
+	top: 110%;
+	left: 0%;
+}
+
+.chevron {
+	position: absolute;
+	width: 2.1rem;
+	height: 0.48rem;
+	opacity: 0;
+	transform: scale(0.3);
+	-webkit-animation: move-chevron 3s ease-out infinite;
+	animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+	-webkit-animation: move-chevron 3s ease-out 1s infinite;
+	animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+	-webkit-animation: move-chevron 3s ease-out 2s infinite;
+	animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	background: white;
+}
+
+.chevron:before {
+	left: 0;
+	transform: skewY(30deg);
+}
+
+.chevron:after {
+	right: 0;
+	width: 50%;
+	transform: skewY(-30deg);
+}
+
+@-webkit-keyframes move-chevron {
+	25% {
+		opacity: 1;
+	}
+	33.3% {
+		opacity: 1;
+		transform: translateY(2.28rem);
+	}
+	66.6% {
+		opacity: 1;
+		transform: translateY(3.12rem);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(4.8rem) scale(0.5);
+	}
+}
+
+@keyframes move-chevron {
+	25% {
+		opacity: 1;
+	}
+	33.3% {
+		opacity: 1;
+		transform: translateY(2.28rem);
+	}
+	66.6% {
+		opacity: 1;
+
+		transform: translateY(3.12rem);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(4.8rem) scale(0.5);
+	}
+}
+/*footer chevron */
+.chevron-container-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: absolute;
+	top: 110%;
+	left: 0%;
+}
+
+.chevron-footer {
+	position: absolute;
+	width: 2.1rem;
+	height: 0.48rem;
+	opacity: 0;
+	transform: scale(0.3);
+	-webkit-animation: move-chevron-footer 3s ease-out infinite;
+	animation: move-chevron-footer 3s ease-out infinite;
+}
+
+.chevron-footer:first-child {
+	-webkit-animation: move-chevron-footer 3s ease-out 1s infinite;
+	animation: move-chevron-footer 3s ease-out 1s infinite;
+}
+
+.chevron-footer:nth-child(2) {
+	-webkit-animation: move-chevron-footer 3s ease-out 2s infinite;
+	animation: move-chevron-footer 3s ease-out 2s infinite;
+}
+
+.chevron-footer:before,
+.chevron-footer:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	background: white;
+}
+
+.chevron-footer:before {
+	left: 0;
+	transform: skewY(-30deg);
+}
+
+.chevron-footer:after {
+	right: 0;
+	width: 50%;
+	transform: skewY(30deg);
+}
+
+@-webkit-keyframes move-chevron-footer {
+	25% {
+		opacity: 1;
+		transform: translateY(4.8rem) scale(0.5);
+	}
+	33.3% {
+		opacity: 1;
+		transform: translateY(3.12rem);
+	}
+	66.6% {
+		opacity: 1;
+		transform: translateY(2.28rem);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes move-chevron {
+	25% {
+		opacity: 1;
+	}
+	33.3% {
+		opacity: 1;
+		transform: translateY(2.28rem);
+	}
+	66.6% {
+		opacity: 1;
+
+		transform: translateY(3.12rem);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(4.8rem) scale(0.5);
+	}
+}
 a {
 	text-decoration: none;
 	color: black;
@@ -23,6 +198,7 @@ a {
 html {
 	font-size: 16px;
 	font-family: 'SFNSText Bold';
+	scroll-behavior: smooth;
 }
 p {
 	font-family: 'SFNSText Regular';
@@ -48,7 +224,7 @@ img {
 	top: 0;
 	left: 0;
 	background-color: #333;
-	opacity: 0.8;
+	opacity: 0.7;
 	z-index: 0;
 }
 .hero {
@@ -57,6 +233,10 @@ img {
 .hero > * {
 	position: relative;
 	z-index: 100;
+}
+.hero-container {
+	width: 80%;
+	margin: auto;
 }
 .hero {
 	background: url('./Assets/church.jpeg') center no-repeat;
@@ -100,6 +280,9 @@ img {
 	border-radius: 1rem 0 0 1rem;
 	transition: all 650ms ease-in-out;
 }
+.nav-item {
+	margin-top: 3rem;
+}
 .open .nav-list {
 	left: 20%;
 }
@@ -107,9 +290,7 @@ img {
 	opacity: 1;
 	transform: scale(1);
 }
-.nav-item {
-	margin-top: 3rem;
-}
+
 .close-container {
 	margin-left: auto;
 	font-size: 1.5rem;
@@ -124,10 +305,11 @@ img {
 .hero-grid {
 	display: grid;
 	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	place-items: center;
 	margin-top: 3rem;
 }
 .hero-grid-item {
-	grid-column: span var(--num-of-grids);
+	grid-column: span 4;
 }
 .hero-grid-item h1 {
 	font-size: 2.5rem;
@@ -156,6 +338,7 @@ img {
 .about-grid {
 	display: grid;
 	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	place-items: center;
 	grid-gap: 2rem;
 }
 .about h2 {
@@ -163,7 +346,7 @@ img {
 	text-align: center;
 }
 .about-grid-item {
-	grid-column: span var(--num-of-grids);
+	grid-column: span 4;
 }
 .content {
 	position: relative;
@@ -200,10 +383,11 @@ img {
 .pastor-grid {
 	display: grid;
 	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	place-items: center;
 	grid-gap: 2rem;
 }
 .pastor-grid-item {
-	grid-column: span var(--num-of-grids);
+	grid-column: span 4;
 }
 .pastor-grid-item h3 {
 	margin-bottom: 1rem;
@@ -221,21 +405,23 @@ img {
 .image-grid {
 	display: grid;
 	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+	place-items: center;
 	grid-gap: 2rem;
 }
-.image-grid img {
+.image-grid .img-container {
 	grid-column: span 2;
 }
 .gallery-grid {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(var(--num-of-grids), 1fr);
+
 	grid-gap: 2rem;
 	justify-content: center;
 	align-items: center;
 }
 .gallery-text,
 .gallery-slide {
-	grid-column: span 6;
+	grid-column: span 4;
 }
 /*footer*/
 
@@ -267,10 +453,15 @@ img {
 	display: grid;
 	grid-template-columns: repeat(var(--num-of-grids), 1fr);
 	grid-gap: 3rem;
+
 	padding-top: 3rem;
 }
 .footer-grid-item {
-	grid-column: span var(--num-of-grids);
+	grid-column: span 4;
+}
+.footer-left {
+	border: 1px solid white;
+	padding: 2rem;
 }
 .footer-grid-item a {
 	color: white;
@@ -289,5 +480,127 @@ img {
 	margin-bottom: 2rem;
 }
 .booking {
-	margin-bottom: 3rem;
+	margin: 3rem 0;
+}
+.splide__slide img {
+	margin: auto;
+}
+.splide__slide h3 {
+	margin-bottom: 1rem;
+}
+.pastor-img {
+	border-radius: 50%;
+	max-width: 70%;
+	margin: auto;
+	height: auto;
+}
+li a {
+	border-bottom: 3px solid black;
+	padding-bottom: 5px;
+}
+.booking > * {
+	margin-bottom: 0.6rem;
+}
+/*about church*/
+.about-church-container {
+	width: 80%;
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.about-church p {
+	padding-top: 1rem;
+}
+.about-church ul {
+	padding-top: 1rem;
+}
+.about-church li {
+	padding-top: 0.5rem;
+}
+/*hover modal*/
+
+@media screen and (min-width: 768px) {
+	:root {
+		--num-of-grids: 8;
+	}
+	.hero {
+		height: 70vh;
+	}
+	.container {
+		width: 70%;
+	}
+	.hero-grid-item h1 {
+		font-size: 3rem;
+		padding-bottom: 1rem;
+		position: relative;
+		color: white;
+	}
+	.hero-grid-item p {
+		color: white;
+		font-size: 1rem;
+	}
+
+	.contact-button {
+		background-color: transparent;
+		border: 1px solid white;
+		padding: 1rem;
+		color: white;
+		margin-top: 2rem;
+		border-radius: 3px;
+		font-size: 1.2rem;
+	}
+	p {
+		line-height: 1.7rem;
+	}
+	.pastor h3 {
+		text-align: left;
+	}
+	.nav-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		position: static;
+		top: 0%;
+		left: 0%;
+		width: 80%;
+		height: 100%;
+		z-index: 999;
+		opacity: 1;
+		padding: 0;
+		margin: auto;
+		background-color: transparent;
+		border: none;
+	}
+	li a {
+		color: white;
+		font-weight: lighter;
+	}
+	.close-container {
+		display: none;
+	}
+	.mobile-toggle {
+		display: none;
+	}
+	.nav-item {
+		margin-left: 4rem;
+		margin-top: 0;
+	}
+	li a {
+		border-bottom: 3px solid white;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.container {
+		width: 80%;
+	}
+	.hero {
+		height: 100vh;
+	}
+
+	.hero-grid {
+		margin-top: 6rem;
+	}
+	.booking {
+		margin-left: 9rem;
+	}
 }
