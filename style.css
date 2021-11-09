@@ -568,7 +568,7 @@ li a {
 .full-img.open {
 	transform: translate(-50%, -50%) scale(1);
 }
-.copyright {
+.footer-section .copyright {
 	font-size: 0.8rem;
 	text-align: center;
 	padding-bottom: 1rem;
@@ -662,5 +662,8 @@ li a {
 	}
 	.booking {
 		margin-left: 9rem;
+	}
+	.hall-img{
+		height:250px;
 	}
 }
