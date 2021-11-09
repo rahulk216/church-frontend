@@ -550,6 +550,7 @@ li a {
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.25s ease-out;
+	z-index: 900;
 }
 .modal.open {
 	opacity: 1;
@@ -604,6 +605,9 @@ li a {
 		margin-top: 2rem;
 		border-radius: 3px;
 		font-size: 1.2rem;
+	}
+	.timings{
+		display: none;
 	}
 	p {
 		line-height: 1.7rem;
