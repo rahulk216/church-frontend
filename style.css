@@ -292,12 +292,12 @@ img {
 	width: 70%;
 	padding: 1rem 1rem;
 }
-.timings{
+.timings {
 	position: absolute;
 	width: 70%;
 	top: 60%;
 	font-weight: bold;
-	padding:0.5rem;
+	padding: 0.5rem;
 	border: 1px solid black;
 }
 .nav-item {
@@ -445,6 +445,10 @@ img {
 .gallery-slide {
 	grid-column: span 4;
 }
+.gallery-img:hover {
+	transform: scale(1.1);
+	transition: all 0.55s ease-out;
+}
 /*footer*/
 
 .footer-section {
@@ -512,7 +516,7 @@ img {
 }
 .pastor-img {
 	border-radius: 50%;
-	max-width: 70%;
+	max-width: 100%;
 	margin: auto;
 	height: auto;
 }
@@ -580,7 +584,7 @@ li a {
 	.hero {
 		height: 70vh;
 	}
-	.nav-contact{
+	.nav-contact {
 		display: none;
 	}
 	.container {
@@ -606,7 +610,7 @@ li a {
 		border-radius: 3px;
 		font-size: 1.2rem;
 	}
-	.timings{
+	.timings {
 		display: none;
 	}
 	p {
@@ -663,7 +667,10 @@ li a {
 	.booking {
 		margin-left: 9rem;
 	}
-	.hall-img{
-		height:250px;
+	.hall-img {
+		height: 250px;
+	}
+	.pastor-img {
+		height:300px;	
 	}
 }
