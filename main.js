@@ -13,7 +13,7 @@ previews.forEach((preview) => {
 		modal.classList.add('open');
 		const originalSrc = preview.getAttribute('data-original');
 		body.style.overflow = 'hidden';
-		original.src = `./Assets/${originalSrc}`;
+		original.src = `${originalSrc}`;
 	});
 });
 
