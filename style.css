@@ -239,7 +239,8 @@ img {
 	margin: auto;
 }
 .hero {
-	background: url('https://cdn.jsdelivr.net/gh/rahulk216/church-images-cdn/church.jpeg') center no-repeat;
+	background: url('https://cdn.jsdelivr.net/gh/rahulk216/church-images-cdn/church.jpeg')
+		center no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	height: 100vh;
@@ -450,7 +451,10 @@ img {
 	transition: all 0.55s ease-out;
 }
 /*footer*/
-
+.slider-img {
+	display: flex;
+	justify-content: center;
+}
 .footer-section {
 	background: url('https://cdn.jsdelivr.net/gh/rahulk216/church-images-cdn/churchIn.jpg')
 		center no-repeat;
