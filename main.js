@@ -3,7 +3,7 @@ const close = document.querySelector('#close');
 const body = document.querySelector('body');
 
 const modal = document.querySelector('.modal');
-const previews = document.querySelectorAll('.gallery img');
+const previews = document.querySelectorAll('.gallery-img');
 const original = document.querySelector('.full-img');
 
 console.log(previews);
@@ -76,7 +76,7 @@ sr.reveal('.animate-right', {
 });
 sr.reveal('.animate-left', {
 	origin: 'left',
-	duration:1000,
+	duration: 1000,
 	distance: '10rem',
 	delay: 0,
 });
