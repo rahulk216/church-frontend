@@ -582,6 +582,12 @@ li a {
 	text-align: center;
 	padding-bottom: 1rem;
 }
+
+/*extra design*/
+.img-border{
+	border: 0.1rem solid black;
+	padding:0.4rem;
+}
 @media screen and (min-width: 768px) {
 	:root {
 		--num-of-grids: 8;
