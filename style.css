@@ -1,11 +1,7 @@
-@font-face {
-	font-family: 'SFNSText Bold';
-	src: url('./Assets/fonts/San Francisco/otf/SFNSText-Bold.otf');
-}
-@font-face {
-	font-family: 'SFNSText Regular';
-	src: url('./Assets/fonts/San Francisco/otf/SFNSText-Light.otf');
-}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
 .chevron-container {
 	display: flex;
 	justify-content: center;
@@ -197,11 +193,11 @@ a {
 }
 html {
 	font-size: 16px;
-	font-family: 'SFNSText Bold';
+	font-family: 'Open Sans', sans-serif;
 	scroll-behavior: smooth;
 }
 p {
-	font-family: 'SFNSText Regular';
+	font-family: 'Open Sans', sans-serif;
 	line-height: 1.4rem;
 }
 li {
@@ -291,7 +287,6 @@ img {
 	position: absolute;
 	top: 90%;
 	width: 70%;
-	padding: 1rem 1rem;
 }
 .timings {
 	position: absolute;
@@ -521,7 +516,7 @@ img {
 }
 .pastor-img {
 	border-radius: 50%;
-	max-width: 100%;
+	max-width: 80%;
 	margin: auto;
 	height: auto;
 }
@@ -682,6 +677,6 @@ li a {
 		height: 250px;
 	}
 	.pastor-img {
-		height: 300px;
+		max-width: 50%;
 	}
 }

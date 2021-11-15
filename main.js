@@ -1,13 +1,9 @@
 const open = document.querySelector('#open');
 const close = document.querySelector('#close');
 const body = document.querySelector('body');
-
 const modal = document.querySelector('.modal');
 const previews = document.querySelectorAll('.gallery-img');
 const original = document.querySelector('.full-img');
-
-console.log(previews);
-console.log(modal);
 previews.forEach((preview) => {
 	preview.addEventListener('click', () => {
 		modal.classList.add('open');
@@ -16,22 +12,18 @@ previews.forEach((preview) => {
 		original.src = `${originalSrc}`;
 	});
 });
-
 modal.addEventListener('click', (e) => {
 	if (e.target.classList.contains('modal')) {
 		modal.classList.remove('open');
 		body.style.overflow = 'scroll';
 	}
 });
-
 open.addEventListener('click', () => {
 	body.classList.add('open');
 });
-
 close.addEventListener('click', () => {
 	body.classList.remove('open');
 });
-
 document.addEventListener('DOMContentLoaded', function () {
 	if (document.getElementById('gallery-slider-left') != null) {
 		var sec = new Splide('#gallery-slider-left', {
@@ -61,22 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}).mount();
 	}
 });
-
-/*Scroll animation*/
-
 window.sr = ScrollReveal();
 sr.reveal('.headline', {
 	duration: 2000,
-});
-sr.reveal('.animate-right', {
-	origin: 'right',
-	duration: 1000,
-	distance: '10rem',
-	delay: 0,
-});
-sr.reveal('.animate-left', {
-	origin: 'left',
-	duration: 1000,
-	distance: '10rem',
-	delay: 0,
 });
