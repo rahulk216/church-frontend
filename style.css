@@ -673,6 +673,10 @@ li a {
 	.container {
 		width: 80%;
 	}
+	.full-img {
+		height:70%;
+		width:50%;
+	}
 	.hero {
 		height: 100vh;
 	}
