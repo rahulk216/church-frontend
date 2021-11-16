@@ -564,7 +564,7 @@ li a {
 	height: auto;
 	top: 50%;
 	left: 50%;
-	width:90%;
+	width: 90%;
 	z-index: 999;
 	transform: translate(-50%, -50%);
 	transition: all 0.25s ease-out;
@@ -582,6 +582,7 @@ li a {
 .img-border {
 	border: 0.1rem solid black;
 	padding: 0.4rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media screen and (min-width: 768px) {
 	:root {
@@ -591,8 +592,8 @@ li a {
 		height: 70vh;
 	}
 	.full-img {
-		height:50%;
-		width:80%;
+		height: 50%;
+		width: 80%;
 	}
 	.nav-contact {
 		display: none;
@@ -674,8 +675,8 @@ li a {
 		width: 80%;
 	}
 	.full-img {
-		height:70%;
-		width:50%;
+		height: 70%;
+		width: 50%;
 	}
 	.hero {
 		height: 100vh;
