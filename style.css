@@ -564,8 +564,9 @@ li a {
 	height: auto;
 	top: 50%;
 	left: 50%;
+	width:90%;
 	z-index: 999;
-	transform: translate(-50%, -50%) scale(0.5);
+	transform: translate(-50%, -50%);
 	transition: all 0.25s ease-out;
 }
 .full-img.open {
