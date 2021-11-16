@@ -584,6 +584,9 @@ li a {
 	padding: 0.4rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.map {
+	padding: 2rem 0 0 0;
+}
 @media screen and (min-width: 768px) {
 	:root {
 		--num-of-grids: 8;
@@ -667,6 +670,12 @@ li a {
 		order: 2;
 	}
 	.order2 {
+		order: 1;
+	}
+	.orderabout1 {
+		order: 2;
+	}
+	.orderabout2 {
 		order: 1;
 	}
 }
