@@ -590,6 +590,10 @@ li a {
 	.hero {
 		height: 70vh;
 	}
+	.full-img {
+		height:50%;
+		width:80%;
+	}
 	.nav-contact {
 		display: none;
 	}
