@@ -57,3 +57,8 @@ window.sr = ScrollReveal();
 sr.reveal('.headline', {
 	duration: 2000,
 });
+
+const showPage = () => {
+  document.getElementById("preloader").classList.add('done');
+  setTimeout(()=>{document.getElementById("preloader").style.display = 'none';}, 3000);
+}
