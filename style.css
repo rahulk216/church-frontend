@@ -433,12 +433,13 @@ img {
 	grid-template-columns: repeat(var(--num-of-grids), 1fr);
 
 	grid-gap: 2rem;
-	justify-content: center;
-	align-items: center;
+
 }
+
 .gallery-text,
 .gallery-slide {
 	grid-column: span 4;
+	
 }
 .gallery-img:hover {
 	transform: scale(1.1);
@@ -448,6 +449,7 @@ img {
 .slider-img {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 .footer-section {
 	background: url('https://cdn.jsdelivr.net/gh/rahulk216/church-images-cdn/churchpic.jpg')
