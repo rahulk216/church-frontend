@@ -509,6 +509,11 @@ img {
 .booking {
 	margin: 3rem 0;
 }
+.splide__slide{
+	height: 300px;
+	display: flex;
+	align-items: center;
+}
 .splide__slide img {
 	margin: auto;
 }
